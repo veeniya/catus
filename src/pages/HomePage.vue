@@ -23,7 +23,7 @@
 
   import { io } from "socket.io-client"
 
-  const socket = io("ws://122.51.87.251:2333")
+  const socket = io("https://122.51.87.251:2333")
   
   const message = ref('')
   const loginLoading = ref(false)
