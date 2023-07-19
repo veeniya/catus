@@ -3,20 +3,20 @@
 const { Server } = require('socket.io')
 
 // const httpServer = createServer()
-const io = new Server(3000, {
+const io = new Server(3001, {
     cors: {
-        origin:"http://localhost:5173"
+        origin: "http://localhost:5173"
     }
 })
 
 io.on("connection", (socket) => {
-//   send a message to the client
+    //   send a message to the client
     socket.emit("hello", "world")
-    
+
     // receie a message from the client
     socket.on("howdy", (arg) => {
         console.log(arg)   //prints "stranger"
-        socket.emit("answer",`You just send "${arg}"`)
+        socket.emit("answer", `You just send "${arg}"`)
     })
 })
 
