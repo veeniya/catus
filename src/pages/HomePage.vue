@@ -23,7 +23,7 @@
 
   import { io } from "socket.io-client"
 
-  const socket = io("ws://localhost:3000")
+  const socket = io("ws://122.51.87.251:3000")
   
   const message = ref('')
   const loginLoading = ref(false)
